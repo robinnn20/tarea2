@@ -1,6 +1,6 @@
 # tarea2
 
-Aquí tienes las instrucciones para instalar las librerías que mencionaste en un sistema Linux. Puedes usar `pip` para instalarlas, que es el gestor de paquetes para Python. Asegúrate de tener Python y `pip` instalados en tu sistema.
+ instrucciones para instalar las librerías 
 
 1. **gRPC**:
    ```bash
@@ -22,28 +22,21 @@ Aquí tienes las instrucciones para instalar las librerías que mencionaste en u
    ```bash
    pip install python-dotenv
    ```
-
-5. **smtplib** y **email** son parte de la biblioteca estándar de Python, por lo que no necesitan instalación adicional.
-
-### Instrucciones generales
-
-- Para instalar todas las librerías a la vez, puedes usar:
-  ```bash
-  pip install grpcio grpcio-tools confluent-kafka elasticsearch python-dotenv
-  ```
-
-### Notas
-
-- Si no tienes `pip` instalado, puedes instalarlo ejecutando:
-  ```bash
-  sudo apt-get install python3-pip  # Para sistemas basados en Debian
-  ```
-
-- Si estás utilizando un entorno virtual (recomendado), asegúrate de activarlo antes de instalar las librerías.
-  
-- Para asegurar que estás utilizando la versión correcta de `pip`, es buena práctica ejecutar `pip3` si estás usando Python 3:
-  ```bash
-  pip3 install grpcio grpcio-tools confluent-kafka elasticsearch python-dotenv
-  ```
-
-Con estas instrucciones deberías poder instalar todas las librerías que mencionaste. Si tienes más preguntas o necesitas ayuda adicional, ¡no dudes en preguntar!
+ instrucciones para inicializar el sistema  
+   
+5. **Primero construir el docker-compose** ):
+   ```bash
+   sudo docker-compose up --build
+   ```
+6. **Segundo inicializar servidor grpc** ):
+   ```bash
+   sudo python3 servidor/grpc_server.py
+   ``` 
+7. **Luego de iniciar el servidor se inicializa el consumer** ):
+   ```bash
+   sudo python3 cliente/consumer.py
+   ``` 
+8. **Luego de iniciar el consumer se inicializa el cliente grpc** ):
+   ```bash
+   sudo python3 cliente/grpc_client_traffic.py
+   ``` 
