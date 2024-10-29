@@ -1,0 +1,12 @@
+# Ignorar el archivo de configuración de entorno
+.env
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar la carpeta de dependencias de Node.js
+node_modules/
+
+# Ignorar archivos de compilación de Python
+__pycache__/
+*.pyc
